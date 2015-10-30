@@ -7,4 +7,5 @@ app.service('mainService', function($http){
                 return data;
             });
     };
-})
+
+});

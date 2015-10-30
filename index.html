@@ -9,19 +9,23 @@
 <h2>pending</h2>
 	<form>
 		<input ng-model="query" placeholder="Search"/>
-		<button ng-click="getData()">Submit</button> 
+		<button pending request="getData()">Submit</button> 
+		<img class="loading" src="http://cdn.yourepeat.com/media/gif/001/386/921/b29276e54c54683796d3e70eb1f50705.gif" style="width: 100px; height: 75px" hidden="true">
 	</form>
 </div>
+
+<p ng-repeat="info in data">{{info.artistName}}</p>
 
 <div>
 <h2>Notifications</h2>
 	<form>
-		<input ng-model="title" placeholder="title"/>
-		<input ng-model="body" placeholder="body"/>
-		<input ng-model="icon" placeholder="iconUrl"/>
-		<button ng-click="">Submit</button> 
+		<input ng-model="scopeTitle" placeholder="title"/>
+		<input ng-model="scopeBody" placeholder="body"/>
+		<input ng-model="scopeIcon" placeholder="iconUrl"/>
+		<button notify request="" title='scopeTitle' body="scopeBody" icon='scopeIcon'>Submit</button> 
 	</form>
 </div>
+
 
 <scripts>
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
